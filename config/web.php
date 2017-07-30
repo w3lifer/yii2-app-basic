@@ -8,7 +8,7 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
-    'components' => [
+    'components' => [ // Sorted alphabetically
         'assetManager' => require_once __DIR__ . '/components/assetManager.php',
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -41,6 +41,10 @@ $config = [
     ],
     'defaultRoute' => 'main',
     'params' => require_once __DIR__ . '/params.php',
+
+    // Events
+
+    'on beforeAction' => require_once __DIR__ . '/beforeAction.php',
 ];
 
 if (YII_ENV_DEV) {
