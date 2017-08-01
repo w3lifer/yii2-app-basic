@@ -42,7 +42,7 @@ $config = [
         ],
     ],
     'defaultRoute' => 'main',
-    'name' => 'Yii2 Basic Plus',
+    'name' => 'Yii2 App Basic Plus',
     'params' => require_once __DIR__ . '/params.php',
 
     // Events
