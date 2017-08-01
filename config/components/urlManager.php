@@ -1,8 +1,15 @@
 <?php
 
+/**
+ * @see https://github.com/codemix/yii2-localeurls#yii2-locale-urls
+ */
+
 return [
-    'enablePrettyUrl' => true,
+    'class' => 'codemix\localeurls\UrlManager',
+    // 'enableLocaleUrls' => false,
+    'languages' => ['en', 'ru'],
     'showScriptName' => false,
+    'enableLanguageDetection' => false,
     'rules' => [
 
         // Account controller
