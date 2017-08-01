@@ -1,18 +1,24 @@
 <?php
 
-/* @var $this yii\web\View */
+/**
+ * @var $this yii\web\View
+ */
 
-use yii\helpers\Html;
+$this->title = Yii::t(ROUTE, 'About');
 
-$this->title = 'About';
-$this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="site-about">
-    <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>
-        This is the About page. You may modify the following file to customize its content:
-    </p>
-
-    <code><?= __FILE__ ?></code>
+<div class="row">
+    <div class="col-lg-12">
+        <h1><?= $this->title ?></h1>
+    </div>
 </div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <a href="https://vk.com/w3lifer" style="text-decoration: none;">
+            ¯\_(ツ)_/¯
+        </a>
+    </div>
+</div>
+

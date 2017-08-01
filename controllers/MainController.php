@@ -3,41 +3,14 @@
 namespace app\controllers;
 
 use app\base\BaseController;
-use app\models\ContactForm;
-use app\models\LoginForm;
+use app\forms\ContactForm;
 use Yii;
-use yii\filters\AccessControl;
-use yii\filters\VerbFilter;
-use yii\web\Response;
 
+/**
+ * Main controller.
+ */
 class MainController extends BaseController
 {
-    /**
-     * @inheritdoc
-     */
-    public function behaviors()
-    {
-        return [
-            'access' => [
-                'class' => AccessControl::className(),
-                'only' => ['logout'],
-                'rules' => [
-                    [
-                        'actions' => ['logout'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                ],
-            ],
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'logout' => ['post'],
-                ],
-            ],
-        ];
-    }
-
     /**
      * @inheritdoc
      */
@@ -47,17 +20,11 @@ class MainController extends BaseController
             'error' => [
                 'class' => 'yii\web\ErrorAction',
             ],
-            'captcha' => [
-                'class' => 'yii\captcha\CaptchaAction',
-                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
-            ],
         ];
     }
 
     /**
-     * Displays homepage.
-     *
-     * @return string
+     * @return mixed
      */
     public function actionIndex()
     {
@@ -65,62 +32,26 @@ class MainController extends BaseController
     }
 
     /**
-     * Login action.
-     *
-     * @return Response|string
-     */
-    public function actionLogin()
-    {
-        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
-
-        $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
-        }
-        return $this->render('login', [
-            'model' => $model,
-        ]);
-    }
-
-    /**
-     * Logout action.
-     *
-     * @return Response
-     */
-    public function actionLogout()
-    {
-        Yii::$app->user->logout();
-
-        return $this->goHome();
-    }
-
-    /**
-     * Displays contact page.
-     *
-     * @return Response|string
-     */
-    public function actionContact()
-    {
-        $model = new ContactForm();
-        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
-            Yii::$app->session->setFlash('contactFormSubmitted');
-
-            return $this->refresh();
-        }
-        return $this->render('contact', [
-            'model' => $model,
-        ]);
-    }
-
-    /**
-     * Displays about page.
-     *
-     * @return string
+     * @return mixed
      */
     public function actionAbout()
     {
         return $this->render('about');
+    }
+
+    /**
+     * @return mixed
+     */
+    public function actionContact()
+    {
+        $model = new ContactForm();
+        if (
+            $model->load(Yii::$app->request->post()) &&
+            $model->contact(Yii::$app->params['supportEmail'])
+        ) {
+            Yii::$app->session->setFlash('flash-contact-form-submitted');
+            return $this->refresh();
+        }
+        return $this->render('contact', compact('model'));
     }
 }

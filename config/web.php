@@ -29,6 +29,7 @@ $config = [
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
+            'useFileTransport' => true,
         ],
         'request' => [
             'cookieValidationKey' => '',
@@ -37,9 +38,11 @@ $config = [
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
+            'loginUrl' => ['account/login'],
         ],
     ],
     'defaultRoute' => 'main',
+    'name' => 'Yii2 Basic Plus',
     'params' => require_once __DIR__ . '/params.php',
 
     // Events
