@@ -32,7 +32,7 @@ $config = [
             'useFileTransport' => true,
         ],
         'request' => [
-            'cookieValidationKey' => '',
+            'cookieValidationKey' => 'GQJPytpokcraUfeQpTeZYwhNdrqe08Fm',
         ],
         'urlManager' => require_once __DIR__ . '/components/urlManager.php',
         'user' => [
