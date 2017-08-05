@@ -1,4 +1,6 @@
-# Yii2 App Basic Plus
+<p align="center">
+    <h1 align="center">Yii 2 Basic Project Template +</h1>
+</p>
 
 ``` mysql
 CREATE DATABASE yii2_app_basic_plus CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
