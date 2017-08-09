@@ -2,9 +2,9 @@
 
 namespace app\models;
 
+use app\base\BaseActiveRecord;
 use Yii;
 use yii\base\NotSupportedException;
-use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
 
 /**
@@ -20,7 +20,7 @@ use yii\web\IdentityInterface;
  * @property string $created_at           [datetime]
  * @property string $updated_at           [datetime]
  */
-class User extends ActiveRecord implements IdentityInterface
+class User extends BaseActiveRecord implements IdentityInterface
 {
     const STATUS_ACTIVE = 1;
 
