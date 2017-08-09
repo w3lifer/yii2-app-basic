@@ -10,15 +10,15 @@ use yii\web\IdentityInterface;
 /**
  * User model.
  *
- * @property int    $id                   [int(11)]
- * @property string $username             [varchar(255)]
- * @property string $email                [varchar(255)]
- * @property string $password_hash        [varchar(255)]
- * @property string $auth_key             [varchar(32)]
- * @property string $password_reset_token [varchar(255)]
- * @property bool   $status               [tinyint(2)]
- * @property string $created_at           [datetime]
- * @property string $updated_at           [datetime]
+ * @property int    $id
+ * @property string $username
+ * @property string $email
+ * @property string $password_hash
+ * @property string $auth_key
+ * @property string $password_reset_token
+ * @property bool   $status
+ * @property string $created_at
+ * @property string $updated_at
  */
 class User extends BaseActiveRecord implements IdentityInterface
 {
