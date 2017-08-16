@@ -1,13 +1,19 @@
 <?php
 
 $config = [
+
+    // Required properties
+
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
+
+    // Optional properties (sorted alphabetically)
+
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
+    'bootstrap' => ['log'],
     'components' => [ // Sorted alphabetically
         'assetManager' => require_once __DIR__ . '/components/assetManager.php',
         'cache' => [
