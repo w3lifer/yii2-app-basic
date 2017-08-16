@@ -87,7 +87,7 @@ class User extends BaseActiveRecord implements IdentityInterface
 
     /*
      * -------------------------------------------------------------------------
-     * Other methods
+     * User logic methods
      * -------------------------------------------------------------------------
      */
 
