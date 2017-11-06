@@ -15,7 +15,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.4.0",
-        "yiisoft/yii2": "~2.0.5",
+        "yiisoft/yii2": "~2.0.13",
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0",
         "codemix/yii2-localeurls": "^1"
@@ -30,13 +30,7 @@
         "codeception/specify": "~0.4.3"
     },
     "config": {
-        "process-timeout": 1800,
-        "fxp-asset":{
-            "installer-paths": {
-                "npm-asset-library": "vendor/npm",
-                "bower-asset-library": "vendor/bower"
-            }
-        }
+        "process-timeout": 1800
     },
     "scripts": {
         "post-install-cmd": [
@@ -61,10 +55,6 @@
             "generateCookieValidationKey": [
                 "config/web.php"
             ]
-        },
-        "asset-installer-paths": {
-            "npm-asset-library": "vendor/npm",
-            "bower-asset-library": "vendor/bower"
         }
     },
     "repositories": [
