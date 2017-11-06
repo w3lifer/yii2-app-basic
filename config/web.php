@@ -54,6 +54,7 @@ $config = [
     // Events
 
     'on beforeAction' => require_once __DIR__ . '/beforeAction.php',
+
 ];
 
 if (YII_ENV_DEV) {
