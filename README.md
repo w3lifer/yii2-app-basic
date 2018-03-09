@@ -1,5 +1,5 @@
 <p align="center">
-    <h1 align="center">Yii 2 Basic Project Template +</h1>
+    <h1 align="center">My Yii 2.0 Basic Project Template</h1>
 </p>
 
 1. Create project:
@@ -11,7 +11,7 @@ composer create-project w3lifer/yii2-app-basic /path/to/project
 2. Create database (MySQL):
 
 ``` mysql
-CREATE DATABASE yii2_app_basic_plus CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE yii2_app_basic_my CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ```
 
 3. Apply migration:
