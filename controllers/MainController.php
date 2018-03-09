@@ -12,7 +12,7 @@ use Yii;
 class MainController extends BaseController
 {
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function actions()
     {

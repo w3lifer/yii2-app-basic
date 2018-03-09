@@ -19,7 +19,7 @@ use yii\web\BadRequestHttpException;
 class AccountController extends BaseController
 {
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function behaviors()
     {

@@ -8,7 +8,7 @@ use yii\db\Migration;
 class m000000_000001_create_user_table extends Migration
 {
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function up()
     {
@@ -39,7 +39,7 @@ class m000000_000001_create_user_table extends Migration
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function down()
     {

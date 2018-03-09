@@ -27,7 +27,7 @@ class SignupForm extends Model
     public $password;
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function rules()
     {
@@ -57,7 +57,7 @@ class SignupForm extends Model
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function attributeLabels()
     {
