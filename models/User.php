@@ -27,7 +27,7 @@ class User extends BaseActiveRecord implements IdentityInterface
     const STATUS_INACTIVE = 0;
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public static function tableName()
     {
@@ -41,7 +41,7 @@ class User extends BaseActiveRecord implements IdentityInterface
      */
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public static function findIdentity($id)
     {
@@ -62,7 +62,7 @@ class User extends BaseActiveRecord implements IdentityInterface
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function getId()
     {
@@ -70,7 +70,7 @@ class User extends BaseActiveRecord implements IdentityInterface
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function getAuthKey()
     {
@@ -78,7 +78,7 @@ class User extends BaseActiveRecord implements IdentityInterface
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function validateAuthKey($authKey)
     {

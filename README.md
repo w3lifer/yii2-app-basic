@@ -35,8 +35,8 @@ The template contains the basic features including user login/logout and a conta
 It includes all commonly used configurations that would allow you to focus on adding new
 features to your application.
 
-[![Latest Stable Version](https://poser.pugx.org/yiisoft/yii2-app-basic/v/stable.png)](https://packagist.org/packages/yiisoft/yii2-app-basic)
-[![Total Downloads](https://poser.pugx.org/yiisoft/yii2-app-basic/downloads.png)](https://packagist.org/packages/yiisoft/yii2-app-basic)
+[![Latest Stable Version](https://img.shields.io/packagist/v/yiisoft/yii2-app-basic.svg)](https://packagist.org/packages/yiisoft/yii2-app-basic)
+[![Total Downloads](https://img.shields.io/packagist/dt/yiisoft/yii2-app-basic.svg)](https://packagist.org/packages/yiisoft/yii2-app-basic)
 [![Build Status](https://travis-ci.org/yiisoft/yii2-app-basic.svg?branch=master)](https://travis-ci.org/yiisoft/yii2-app-basic)
 
 DIRECTORY STRUCTURE
@@ -102,6 +102,29 @@ You can then access the application through the following URL:
 ~~~
 http://localhost/basic/web/
 ~~~
+
+
+### Install with Docker
+
+Update your vendor packages
+
+    docker-compose run --rm php composer update --prefer-dist
+    
+Run the installation triggers (creating cookie validation code)
+
+    docker-compose run --rm php composer install    
+    
+Start the container
+
+    docker-compose up -d
+    
+You can then access the application through the following URL:
+
+    http://127.0.0.1:8000
+
+**NOTES:** 
+- Minimum required Docker engine version `17.04` for development (see [Performance tuning for volume mounts](https://docs.docker.com/docker-for-mac/osxfs-caching/))
+- The default configuration uses a host-volume in your home directory `.docker-composer` for composer caches
 
 
 CONFIGURATION
