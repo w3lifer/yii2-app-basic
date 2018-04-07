@@ -34,7 +34,6 @@ CREATE UNIQUE INDEX `email` ON `user` (`email`);
 CREATE UNIQUE INDEX `password_reset_token` ON `user` (`password_reset_token`);
               
 SQL
-
         );
     }
 
