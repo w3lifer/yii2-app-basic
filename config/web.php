@@ -29,7 +29,7 @@ $config = [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
-        'db' => require_once __DIR__ . '/components/db.php',
+        'db' => require_once __DIR__ . '/db.php',
         'errorHandler' => [
             'errorAction' => 'main/error',
         ],
