@@ -59,7 +59,7 @@ $config = [
             'useFileTransport' => true,
         ],
         'request' => [
-            'cookieValidationKey' => '1',
+            'cookieValidationKey' => '',
         ],
         /**
          * @see https://github.com/codemix/yii2-localeurls#yii2-locale-urls
