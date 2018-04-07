@@ -111,14 +111,14 @@ class AccountController extends BaseController
             if ($model->sendEmail()) {
                 Yii::$app->session->setFlash(
                     'flash-success',
-                    Yii::t(ROUTE, 'Check your email for further instructions.')
+                    Yii::t('app', 'Check your email for further instructions.')
                 );
                 return $this->goHome();
             }
             Yii::$app->session->setFlash(
                 'flash-error',
                 Yii::t(
-                    ROUTE,
+                    'app',
                     'Sorry, we are unable to reset password for the provided email address.'
                 )
             );
@@ -146,7 +146,7 @@ class AccountController extends BaseController
         ) {
             Yii::$app->session->setFlash(
                 'flash-success',
-                Yii::t(ROUTE, 'New password saved.')
+                Yii::t('app', 'New password saved.')
             );
             return $this->goHome();
         }

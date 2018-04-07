@@ -9,7 +9,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
-$this->title = Yii::t(ROUTE, 'Reset password');
+$this->title = Yii::t('app', 'Reset password');
 
 ?>
 
@@ -30,7 +30,7 @@ $this->title = Yii::t(ROUTE, 'Reset password');
                     ->passwordInput(['autofocus' => true])
             ?>
             <div class="form-group">
-                <?= Html::submitButton(Yii::t(ROUTE, 'Save')) ?>
+                <?= Html::submitButton(Yii::t('app', 'Save')) ?>
             </div>
         <?php ActiveForm::end() ?>
     </div>

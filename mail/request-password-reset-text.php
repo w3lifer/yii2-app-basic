@@ -13,6 +13,6 @@ $resetLink =
 
 ?>
 
-<?= Yii::t(ROUTE, 'Follow the link below to reset your password') ?>:
+<?= Yii::t('app', 'Follow the link below to reset your password') ?>:
 
 <?= $resetLink ?>

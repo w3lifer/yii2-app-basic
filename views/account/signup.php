@@ -8,7 +8,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
-$this->title = Yii::t(ROUTE, 'Signup');
+$this->title = Yii::t('app', 'Signup');
 
 ?>
 

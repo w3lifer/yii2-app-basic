@@ -8,7 +8,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
-$this->title = Yii::t(ROUTE, 'Contact');
+$this->title = Yii::t('app', 'Contact');
 
 ?>
 
@@ -21,7 +21,7 @@ $this->title = Yii::t(ROUTE, 'Contact');
 <?php if (Yii::$app->session->hasFlash('flash-contact-form-submitted')) : ?>
     <div class="alert alert-success">
         <?= Yii::t(
-            ROUTE,
+            'app',
             'Thank you for contacting us. We will respond to you as soon as possible.'
         ) ?>
     </div>
@@ -50,7 +50,7 @@ $this->title = Yii::t(ROUTE, 'Contact');
                         ->textarea(['rows' => 6])
                 ?>
                 <div class="form-group">
-                    <?= Html::submitButton(Yii::t(ROUTE, 'Submit')) ?>
+                    <?= Html::submitButton(Yii::t('app', 'Submit')) ?>
                 </div>
             <?php ActiveForm::end() ?>
         </div>

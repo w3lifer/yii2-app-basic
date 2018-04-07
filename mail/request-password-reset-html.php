@@ -16,8 +16,6 @@ $resetLink =
 ?>
 
 <div class="password-reset">
-    <p><?=
-        Yii::t(ROUTE, 'Follow the link below to reset your password')
-    ?>:</p>
+    <p><?= Yii::t('app', 'Follow the link below to reset your password') ?>:</p>
     <p><?= Html::a(Html::encode($resetLink), $resetLink) ?></p>
 </div>

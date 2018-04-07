@@ -4,7 +4,7 @@
  * @var $this \yii\web\View
  */
 
-$this->title = Yii::t(ROUTE, 'Account');
+$this->title = Yii::t('app', 'Account');
 
 ?>
 

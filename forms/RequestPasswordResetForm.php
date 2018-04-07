@@ -40,7 +40,7 @@ class RequestPasswordResetForm extends Model
     public function attributeLabels()
     {
         return [
-            'email' => Yii::t(ROUTE, 'Email'),
+            'email' => Yii::t('app', 'Email'),
         ];
     }
 
@@ -75,11 +75,11 @@ class RequestPasswordResetForm extends Model
                 )
                 ->setFrom([
                     Yii::$app->params['supportEmail'] =>
-                        Yii::$app->name . ' - ' . Yii::t(ROUTE, 'Robot')
+                        Yii::$app->name . ' - ' . Yii::t('app', 'Robot')
                 ])
                 ->setTo($this->email)
                 ->setSubject(
-                    Yii::t(ROUTE, 'Password reset for') . ' ' . Yii::$app->name
+                    Yii::t('app', 'Password reset for') . ' ' . Yii::$app->name
                 )
                 ->send();
     }

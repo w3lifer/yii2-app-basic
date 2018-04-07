@@ -8,7 +8,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
-$this->title = Yii::t(ROUTE, 'Login');
+$this->title = Yii::t('app', 'Login');
 
 ?>
 
@@ -42,7 +42,7 @@ $this->title = Yii::t(ROUTE, 'Login');
             <div class="form-group">
                 <?=
                     Html::a(
-                        Yii::t(ROUTE, 'Forgot password?'),
+                        Yii::t('app', 'Forgot password?'),
                         ['account/request-password-reset']
                     )
                 ?>
