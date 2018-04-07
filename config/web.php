@@ -33,7 +33,14 @@ $config = [
         'errorHandler' => [
             'errorAction' => 'main/error',
         ],
-        'i18n' => require_once __DIR__ . '/components/i18n.php',
+        'i18n' => [
+            'translations' => [
+                '*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/translations',
+                ],
+            ],
+        ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
