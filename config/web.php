@@ -22,7 +22,7 @@ $config = [
             'bundles' => [
                 'yii\web\JqueryAsset' => [
                     'js' => [
-                        'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/' .
+                        'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/' .
                             (YII_ENV_DEV ? 'jquery.js' : 'jquery.min.js'),
                     ],
                 ],
