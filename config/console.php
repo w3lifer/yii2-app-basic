@@ -1,5 +1,7 @@
 <?php
 
+$params = require_once __DIR__ . '/params.php';
+
 $config = [
     'id' => 'basic-console',
     'basePath' => dirname(__DIR__),
@@ -24,7 +26,7 @@ $config = [
             ],
         ],
     ],
-    'params' => require_once __DIR__ . '/params.php',
+    'params' => $params,
     // 'controllerMap' => [
     //     'fixture' => [ // Fixture generation command line.
     //         'class' => 'yii\faker\FixtureController',

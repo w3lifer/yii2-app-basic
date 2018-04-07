@@ -2,6 +2,8 @@
 
 use yii\helpers\Inflector;
 
+$params = require_once __DIR__ . '/params.php';
+
 $config = [
 
     // Required properties
@@ -57,7 +59,7 @@ $config = [
             'useFileTransport' => true,
         ],
         'request' => [
-            'cookieValidationKey' => '',
+            'cookieValidationKey' => '1',
         ],
         /**
          * @see https://github.com/codemix/yii2-localeurls#yii2-locale-urls
@@ -84,7 +86,7 @@ $config = [
     ],
     'defaultRoute' => 'main',
     'name' => 'My Yii2 App Basic',
-    'params' => require_once __DIR__ . '/params.php',
+    'params' => $params,
 
     // Events
 
