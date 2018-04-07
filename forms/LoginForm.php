@@ -9,7 +9,7 @@ use yii\base\Model;
 /**
  * Login form.
  *
- * @property User|null $user Read-only property.
+ * @property \app\models\User|null $user Read-only property.
  */
 class LoginForm extends Model
 {
@@ -104,7 +104,7 @@ class LoginForm extends Model
 
     /**
      * Finds user by username.
-     * @return User|null
+     * @return \app\models\User|null
      */
     public function getUser()
     {

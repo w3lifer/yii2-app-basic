@@ -1,9 +1,9 @@
 <?php
 
 /**
- * @var $this    yii\web\View
+ * @var $this    \yii\web\View
  * @var $content string
- * @var $user    app\models\User
+ * @var $user    \app\models\User
  */
 
 use app\assets\MainAsset;

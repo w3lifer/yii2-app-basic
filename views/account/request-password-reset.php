@@ -1,8 +1,8 @@
 <?php
 
 /**
- * @var $this  yii\web\View
- * @var $model app\forms\RequestPasswordResetForm
+ * @var $this  \yii\web\View
+ * @var $model \app\forms\RequestPasswordResetForm
  */
 
 use yii\helpers\Html;

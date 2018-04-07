@@ -130,7 +130,7 @@ class AccountController extends BaseController
      * Resets password.
      * @param string $token
      * @return mixed
-     * @throws BadRequestHttpException
+     * @throws \yii\web\BadRequestHttpException
      */
     public function actionResetPassword($token)
     {

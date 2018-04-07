@@ -1,8 +1,8 @@
 <?php
 
 /**
- * @var $this    yii\web\View
- * @var $message yii\mail\MessageInterface
+ * @var $this    \yii\web\View
+ * @var $message \yii\mail\MessageInterface
  * @var $content string
  */
 

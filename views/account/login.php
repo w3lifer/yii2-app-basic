@@ -1,8 +1,8 @@
 <?php
 
 /**
- * @var $this  yii\web\View
- * @var $model app\forms\LoginForm
+ * @var $this  \yii\web\View
+ * @var $model \app\forms\LoginForm
  */
 
 use yii\helpers\Html;

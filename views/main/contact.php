@@ -1,8 +1,8 @@
 <?php
 
 /**
- * @var $this yii\web\View
- * @var $model app\forms\ContactForm
+ * @var $this  \yii\web\View
+ * @var $model \app\forms\ContactForm
  */
 
 use yii\helpers\Html;

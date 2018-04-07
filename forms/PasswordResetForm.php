@@ -18,7 +18,7 @@ class PasswordResetForm extends Model
     public $password;
 
     /**
-     * @var User
+     * @var \app\models\User
      */
     private $_user;
 
@@ -26,7 +26,7 @@ class PasswordResetForm extends Model
      * Creates a form model given a token.
      * @param string $token
      * @param array  $config
-     * @throws InvalidParamException
+     * @throws \yii\base\InvalidParamException
      */
     public function __construct($token, $config = [])
     {

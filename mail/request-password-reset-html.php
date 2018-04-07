@@ -3,8 +3,8 @@
 use yii\helpers\Html;
 
 /**
- * @var $this yii\web\View
- * @var $user app\models\User
+ * @var $this \yii\web\View
+ * @var $user \app\models\User
  */
 
 $resetLink =

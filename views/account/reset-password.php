@@ -1,9 +1,9 @@
 <?php
 
 /**
- * @var $this  yii\web\View
- * @var $model app\forms\PasswordResetForm
- * @var $form  yii\widgets\ActiveForm
+ * @var $this  \yii\web\View
+ * @var $model \app\forms\PasswordResetForm
+ * @var $form  \yii\widgets\ActiveForm
  */
 
 use yii\helpers\Html;

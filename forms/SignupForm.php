@@ -70,7 +70,7 @@ class SignupForm extends Model
 
     /**
      * Signs user up.
-     * @return User|null The saved model or null if saving fails.
+     * @return \app\models\User|null The saved model or null if saving fails.
      */
     public function signup()
     {
