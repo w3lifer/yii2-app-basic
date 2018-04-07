@@ -4,9 +4,6 @@ namespace app\helpers;
 
 use Yii;
 
-/**
- * Js helper.
- */
 class AssetHelper
 {
     const PATH_PREFIX = 'js/';
