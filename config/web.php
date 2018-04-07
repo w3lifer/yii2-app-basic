@@ -48,7 +48,7 @@ $config = [
         ],
     ],
     'defaultRoute' => 'main',
-    'name' => 'Yii2 App Basic Plus',
+    'name' => 'My Yii2 App Basic',
     'params' => require_once __DIR__ . '/params.php',
 
     // Events
