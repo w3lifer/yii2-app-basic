@@ -7,7 +7,7 @@ use Yii;
 /**
  * Js helper.
  */
-class JsHelper
+class AssetHelper
 {
     const PATH_PREFIX = 'js/';
 
