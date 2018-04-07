@@ -20,6 +20,8 @@ CREATE DATABASE yii2_app_basic_my CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_
 php yii migrate
 ```
 
+4. Copy `@app/config/db.sample.php` to `@app/config/db.php`.
+
 <p align="center">
     <a href="https://github.com/yiisoft" target="_blank">
         <img src="https://avatars0.githubusercontent.com/u/993323" height="100px">
