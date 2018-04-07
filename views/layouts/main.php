@@ -31,7 +31,7 @@ $user = Yii::$app->user->identity;
     <title><?= Html::encode($this->title) ?></title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?= Html::csrfMetaTags() ?>
+    <?php $this->registerCsrfMetaTags() ?>
     <?php $this->head() ?>
 </head>
 <body>
