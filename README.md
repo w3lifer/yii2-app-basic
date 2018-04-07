@@ -4,7 +4,7 @@
 
 1. Create project:
 
-``` shell
+``` sh
 composer create-project w3lifer/yii2-app-basic /path/to/project
 ```
 
@@ -14,13 +14,31 @@ composer create-project w3lifer/yii2-app-basic /path/to/project
 CREATE DATABASE yii2_app_basic_my CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ```
 
-3. Apply migration:
+3. Copy `@app/config/db.sample.php` to `@app/config/db.php`:
 
-``` shell
+``` sh
+cp config/db.sample.php config/db.php
+```
+
+4. Change database credentials in the `@app/config/db.php`:
+
+``` sh
+vim config/db.php
+```
+
+5. Apply migration:
+
+``` sh
 php yii migrate
 ```
 
-4. Copy `@app/config/db.sample.php` to `@app/config/db.php`.
+6. Comment out `YII_DEBUG` and `YII_ENV` constants in the `@app/web/index.php` on production:
+
+``` sh
+vim web/index.php
+```
+
+---
 
 <p align="center">
     <a href="https://github.com/yiisoft" target="_blank">
