@@ -38,12 +38,6 @@ vim config/db.php
 php yii migrate
 ```
 
-6. Comment out `YII_DEBUG` and `YII_ENV` constants in the `@app/web/index.php` on production:
-
-``` sh
-vim web/index.php
-```
-
 ---
 
 <p align="center">
