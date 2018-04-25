@@ -19,8 +19,9 @@
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0",
         "codemix/yii2-localeurls": "^1",
-        "w3lifer/yii2-helper": "^1",
-        "w3lifer/yii2-i18n-js": "^2"
+        "w3lifer/response-interface": "^1.0",
+        "w3lifer/yii2-asset-helper": "^1.0",
+        "w3lifer/yii2-i18n-js": "^2.1"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
