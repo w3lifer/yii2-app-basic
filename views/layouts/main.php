@@ -7,14 +7,14 @@
  */
 
 use app\assets\MainAsset;
-use app\helpers\AssetHelper;
+use w3lifer\yii2\Helper;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\helpers\Html;
 
 MainAsset::register($this);
 
-$this->registerJsFile(AssetHelper::getPathToJsFileByRoute(ROUTE), [
+$this->registerJsFile(Helper::getAbsoluteWebPathToJsFileByRoute(), [
     'depends' => [
         'app\assets\MainAsset',
     ],
