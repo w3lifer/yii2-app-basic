@@ -11,14 +11,17 @@ use w3lifer\yii2\AssetHelper;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\helpers\Html;
+use yii\web\Application;
 
 MainAsset::register($this);
 
-$this->registerJsFile(AssetHelper::getAbsoluteWebPathToJsFileByRoute(), [
-    'depends' => [
-        'app\assets\MainAsset',
-    ],
-]);
+if ($this->context instanceof Application) {
+    $this->registerJsFile(AssetHelper::getAbsoluteWebPathToJsFileByRoute(), [
+        'depends' => [
+            'app\assets\MainAsset',
+        ],
+    ]);
+}
 
 $user = Yii::$app->user->identity;
 
