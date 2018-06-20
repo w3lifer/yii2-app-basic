@@ -61,9 +61,7 @@ $config = [
         'request' => [
             'cookieValidationKey' => '',
         ],
-        /**
-         * @see https://github.com/codemix/yii2-localeurls#yii2-locale-urls
-         */
+        // https://github.com/codemix/yii2-localeurls#yii2-locale-urls
         'urlManager' => [
             'class' => 'codemix\localeurls\UrlManager',
             // 'enableLocaleUrls' => false,
