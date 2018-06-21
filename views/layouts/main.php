@@ -28,7 +28,7 @@ $user = Yii::$app->user->identity;
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>">
+<html lang="<?= Yii::$app->language ?>" id="<?= ROUTE_AS_ID ?>">
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
     <title><?= Html::encode($this->title) ?></title>
@@ -39,70 +39,68 @@ $user = Yii::$app->user->identity;
 </head>
 <body>
 <?php $this->beginBody() ?>
-<div id="<?= ROUTE_AS_ID ?>">
-    <?php
-    NavBar::begin([
-        'brandLabel' => Yii::$app->name,
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar-default navbar-fixed-top',
-        ],
-    ]);
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => [
+<?php
+NavBar::begin([
+    'brandLabel' => Yii::$app->name,
+    'brandUrl' => Yii::$app->homeUrl,
+    'options' => [
+        'class' => 'navbar-default navbar-fixed-top',
+    ],
+]);
+echo Nav::widget([
+    'options' => ['class' => 'navbar-nav navbar-right'],
+    'items' => [
 
-            // About
+        // About
 
-            ['label' => Yii::t('main', 'About'), 'url' => ['main/about']],
+        ['label' => Yii::t('main', 'About'), 'url' => ['main/about']],
 
-            // Contact
+        // Contact
 
-            ['label' => Yii::t('main', 'Contact'), 'url' => ['main/contact']],
+        ['label' => Yii::t('main', 'Contact'), 'url' => ['main/contact']],
 
-            // Login
+        // Login
 
-            Yii::$app->user->isGuest
-                ?
-                    [
-                        'label' => Yii::t('main', 'Login'),
-                        'url' => ['account/login'],
-                    ]
-                :
-                    [
-                        'label' => $user->email,
-                        'url' => ['account/index'],
-                    ],
+        Yii::$app->user->isGuest
+            ?
+                [
+                    'label' => Yii::t('main', 'Login'),
+                    'url' => ['account/login'],
+                ]
+            :
+                [
+                    'label' => $user->email,
+                    'url' => ['account/index'],
+                ],
 
-            // Signup
+        // Signup
 
-            Yii::$app->user->isGuest
-                ?
-                    [
-                        'label' => Yii::t('main', 'Signup'),
-                        'url' => ['account/signup'],
-                    ]
-                :
-                    '<li>' .
-                        Html::beginForm(['account/logout'], 'post', [
-                            'id' => 'logout-form',
-                        ]) .
-                            Html::submitButton(
-                                Yii::t('main', 'Logout'),
-                                [
-                                    'id' => 'logout-button',
-                                    'class' => 'btn btn-link',
-                                ]
-                            ) .
-                        Html::endForm() .
-                    '</li>',
-        ],
-    ]);
-    NavBar::end();
-    ?>
-    <div class="container">
-        <?= $content ?>
-    </div>
+        Yii::$app->user->isGuest
+            ?
+                [
+                    'label' => Yii::t('main', 'Signup'),
+                    'url' => ['account/signup'],
+                ]
+            :
+                '<li>' .
+                    Html::beginForm(['account/logout'], 'post', [
+                        'id' => 'logout-form',
+                    ]) .
+                        Html::submitButton(
+                            Yii::t('main', 'Logout'),
+                            [
+                                'id' => 'logout-button',
+                                'class' => 'btn btn-link',
+                            ]
+                        ) .
+                    Html::endForm() .
+                '</li>',
+    ],
+]);
+NavBar::end();
+?>
+<div class="container">
+    <?= $content ?>
 </div>
 <?php $this->endBody() ?>
 </body>
