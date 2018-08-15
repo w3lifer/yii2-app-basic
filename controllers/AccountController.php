@@ -8,7 +8,7 @@ use app\forms\PasswordResetForm;
 use app\forms\RequestPasswordResetForm;
 use app\forms\SignupForm;
 use Yii;
-use yii\base\InvalidParamException;
+use yii\base\InvalidArgumentException;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 use yii\web\BadRequestHttpException;
@@ -136,7 +136,7 @@ class AccountController extends BaseController
     {
         try {
             $model = new PasswordResetForm($token);
-        } catch (InvalidParamException $exception) {
+        } catch (InvalidArgumentException $exception) {
             throw new BadRequestHttpException($exception->getMessage());
         }
         if (
